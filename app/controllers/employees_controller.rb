@@ -1,6 +1,14 @@
 class EmployeesController < ApplicationController
+    def index
+        @employees = Employee.all
+    end
+    
     def new
         @employee = Employee.new
+    end 
+
+    def edit
+        @employee = Employee.find(params[:id])
     end
 
     def create
@@ -11,6 +19,16 @@ class EmployeesController < ApplicationController
             redirect_to employee_path(@employee)
         else 
             render 'new'
+        end
+    end
+
+    def update
+        @employee = Employee.find(params[:id])
+        if @employee.update(employee_params)
+            flash[:notice] = "Employee record was successfully updated"
+            redirect_to employee_path(@employee)
+        else
+            render 'edit'
         end
     end
 

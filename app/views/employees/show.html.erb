@@ -39,3 +39,8 @@
 <p> 
     Email: <%= @employee.email %>
 </p>
+
+<p>
+    <%= link_to "Edit employee record",  edit_employee_path(@employee) %> &nbsp | &nbsp
+    <%= link_to "Back to employees listing",  employees_path %>
+</p>

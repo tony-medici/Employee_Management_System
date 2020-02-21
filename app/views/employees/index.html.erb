@@ -1,0 +1,39 @@
+<h1> Listing All Employees </h1>
+
+<p>
+    <%= link_to "Create new employee", new_employee_path %> 
+</p>
+
+<table>
+    <tr> 
+        <th> Fullname</th>
+        <th> Age</th>
+        <th> Gender</th>
+        <th> Marital Status</th>
+        <th> State</th>
+        <th> LGA</th>
+        <th> Address</th>
+        <th> Phone Number</th>
+        <th> Start Date</th>
+        <th> Email</th>
+    </tr>
+
+    <% @employees.each do |employee| %>
+        <tr> 
+            <td> <%= employee.fullname %> </td>
+            <td> <%= employee.age %> </td>
+            <td> <%= employee.gender %> </td>
+            <td> <%= employee.marital_status %> </td>
+            <td> <%= employee.state %> </td>
+            <td> <%= employee.lga %> </td>
+            <td> <%= employee.address %> </td>
+            <td> <%= employee.phone_number %> </td>
+            <td> <%= employee.start_date %> </td>
+            <td> <%= employee.email %> </td>
+            <td> <%= link_to "Edit", edit_employee_path(employee) %>  </td>
+            <td> <%= link_to "Show", employee_path(employee) %> </td>
+        </tr>
+
+    <% end %>
+
+</table>
