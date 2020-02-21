@@ -8,6 +8,4 @@ class Employee < ApplicationRecord
     validates :address, presence: true, length: {minimum: 45, maximum: 255}
     validates :start_date, presence: true
     validates :email, presence: true
-    validates :created_at, presence: true
-    validates :updated_at, presence: true
 end

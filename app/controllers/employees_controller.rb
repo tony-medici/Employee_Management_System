@@ -6,8 +6,16 @@ class EmployeesController < ApplicationController
     def create
         #render plain: params[:employee].inspect
         @employee = Employee.new(employee_params)
-        @employee.save
-        redirect_to employees_show(@employee)
+        if @employee.save
+            flash[:notice] = "Employee was successfully created"
+            redirect_to employee_path(@employee)
+        else 
+            render 'new'
+        end
+    end
+
+    def show
+        @employee = Employee.find(params[:id])
     end
 
     private
