@@ -36,6 +36,13 @@ class EmployeesController < ApplicationController
         @employee = Employee.find(params[:id])
     end
 
+    def destroy
+        @employee = Employee.find(params[:id])
+        @employee.destroy
+        flash[:notice] = "Article was successfully deleted"
+        redirect_to employees_path
+    end
+
     private
 
         def employee_params
