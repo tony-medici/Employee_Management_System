@@ -1,4 +1,7 @@
 class EmployeesController < ApplicationController
+    
+    before_action :set_employee, only: [:show, :destroy, :update, :edit]
+
     def index
         @employees = Employee.all
     end
@@ -8,7 +11,7 @@ class EmployeesController < ApplicationController
     end 
 
     def edit
-        @employee = Employee.find(params[:id])
+
     end
 
     def create
@@ -23,7 +26,6 @@ class EmployeesController < ApplicationController
     end
 
     def update
-        @employee = Employee.find(params[:id])
         if @employee.update(employee_params)
             flash[:notice] = "Employee record was successfully updated"
             redirect_to employee_path(@employee)
@@ -33,17 +35,20 @@ class EmployeesController < ApplicationController
     end
 
     def show
-        @employee = Employee.find(params[:id])
+
     end
 
     def destroy
-        @employee = Employee.find(params[:id])
         @employee.destroy
         flash[:notice] = "Article was successfully deleted"
         redirect_to employees_path
     end
 
     private
+
+        def set_employee
+            @employee = Employee.find(params[:id])
+        end
 
         def employee_params
             params.require(:employee).permit(:fullname, :age, :gender,
