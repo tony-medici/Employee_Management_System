@@ -1,2 +1,110 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#home1{
+    background-image: url("../images/backGround/bg4.jpg");
+    font-size: 14pt;
+}
+
+.main{
+    background: white;
+    border: 4px solid white;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+
+.inp{
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 4px solid #1b95e0;
+    border-radius: 15%;
+    font-weight: bold;
+}
+
+#recover{
+    margin-left: -34px;
+}
+
+.but{
+    background: transparent;
+    color: black;
+    font-weight: bold;
+    border-radius: 15%;
+    border: 4px solid #1b95e0;
+    margin-left: -135px;
+}
+
+.but:hover{
+    background: black;
+    border: 3px solid #1b95e0;
+    color: white;
+    transition: linear all 0.4s;
+}
+
+#option{
+    font-weight: bold;
+}
+
+.animated{
+    animation-delay: 1.1s;
+}
+
+.create:hover{
+    font-size: 16pt;
+    transition: linear all 0.8s;
+    padding-top: 480px;
+}
+
+#logo{
+    margin-top: 8px;
+    color: #1b95e0;
+    font-weight: bold;
+}
+
+#logo2{
+    margin-top: 6px;
+    color: #1b95e0;
+    font-weight: bold;
+}
+
+#home2{
+    background-image: url("../images/backGround/bg1.jpg");
+    font-size: 14pt;
+}
+
+.main2{
+    background: white;
+    border: 4px solid white;
+    opacity: 0.7;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 660px;
+}
+
+#myform2{
+    margin-top: 30px;
+}
+
+#myform{
+    margin-top: 60px;
+}
+
+.footer{
+    background: transparent;
+    color: #0b3e5d;
+    font-size: 11pt;
+    font-weight: bold;
+    width: 100%;
+}
+
+.footer > a{
+    color: #0b3e5d;
+    text-decoration: none;
+}

@@ -1,7 +1,10 @@
 class EmployeesController < ApplicationController
     
     before_action :set_employee, only: [:show, :destroy, :update, :edit]
+    def home
 
+    end
+    
     def index
         @employees = Employee.all
     end
