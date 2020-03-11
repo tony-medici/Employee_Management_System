@@ -1,0 +1,38 @@
+ <h1 id="logo"> LOGO </h1>
+
+<div class="container main" align="center">    
+    <%= form_for(:session, :html => {class: " ", role: "form"}, url: login_path) do |f| %>
+
+        <div class="animated slideInRight">
+        
+            <div class="">
+                <%= f.text_field :username, class: "inp", placeholder: "Username", autofocus: true %>
+            </div> <br>
+        
+            <div class="">
+                <%= f.password_field :password, class: "inp", placeholder: "Password", autocomplete: "off" %>
+            </div> <br>
+        
+        
+            <div class="">
+                <%= f.submit "Log in", class: 'btn btn-primary btn-lg but' %>
+            </div>
+        
+        </div>
+        
+    <% end %>
+
+    
+    <footer>		
+        <div class="navbar-fixed-bottom footer">
+            <div>
+                <p> <b>&copy 2019 </b> </p>
+            </div>
+            <a href = "Project.html"> PARTNERS </a> &nbsp;&nbsp;
+            <a href = "Contact.html">CONTACT</a> &nbsp;&nbsp;
+            <a href = "Index.html"> FAQ</a> &nbsp;&nbsp;
+        </div>
+    </footer>
+
+
+</div>
